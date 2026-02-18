@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
-import Head from "next/head";
 import "./globals.css";
 
 /* components */
@@ -33,19 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="preload" href="/icons/add-cart-outline.svg" />
-        <link rel="preload" href="/icons/add-cart.svg" />
-        <link rel="preload" href="/icons/cart.svg" />
-        <link rel="preload" href="/icons/close.svg" />
-        <link rel="preload" href="/icons/minus.svg" />
-        <link rel="preload" href="/icons/plus.svg" />
-        <link rel="preload" href="/icons/star.svg" />
-        <link rel="preload" href="/icons/trash-outline.svg" />
-        <link rel="preload" href="/icons/trash.svg" />
-      </Head>
       <body
-        className={`${openSans.variable} antialiased overflow-x-hidden min-h-screen`}
+        className={`${openSans.variable} antialiased overflow-x-hidden min-h-dvh`}
       >
         <CartContextProvider>
           <Header />

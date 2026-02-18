@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import Image from "next/image";
 
 /* types */
 import type { MenuItemType } from "@/types/menu-item";
@@ -9,6 +8,9 @@ import { CartContext } from "@/components/context/cart-context";
 
 /* util */
 import { addToCart } from "@/util/cart";
+
+/* icons */
+import AddCartOutline from "@/components/icons/add-cart-outline";
 
 export default function AddCart({ item }: { item: MenuItemType }) {
   const { value, setValue } = useContext(CartContext);
@@ -25,13 +27,7 @@ export default function AddCart({ item }: { item: MenuItemType }) {
       onClick={handleAddToCart}
       className="rounded-full bg-light-gray p-4"
     >
-      <Image
-        src="/icons/add-cart-outline.svg"
-        alt={`Add ${item.name} to cart`}
-        width={27}
-        height={24}
-        priority
-      />
+      <AddCartOutline width={27} height={24} />
     </button>
   );
 }

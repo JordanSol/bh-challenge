@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useContext } from "react";
 
 /* types */
@@ -13,6 +12,11 @@ import { removeFromCart, addToCart } from "@/util/cart";
 
 /* components */
 import AddCart from "@/components/shared/add-card";
+
+/* icons */
+import TrashOutline from "@/components/icons/trash-outline";
+import Minus from "@/components/icons/minus";
+import Plus from "@/components/icons/plus";
 
 export default function CartTool({ item }: { item: MenuItemType }) {
   const { value, setValue } = useContext(CartContext);
@@ -39,23 +43,15 @@ export default function CartTool({ item }: { item: MenuItemType }) {
   return (
     <div className="bg-light-gray rounded-full flex justify-between items-center p-4 gap-4 shrink-0">
       <button onClick={handleRemove} className="h-6 w-full cursor-pointer">
-        <Image
-          src={singleItem ? "/icons/trash-outline.svg" : "/icons/minus.svg"}
-          alt="Remove item from cart"
-          width={21}
-          height={24}
-          priority
-        />
+        {singleItem ? (
+          <TrashOutline width={21} height={24} />
+        ) : (
+          <Minus width={21} height={24} />
+        )}
       </button>
       <span className="text-2xl leading-none">{itemAmount}</span>
       <button onClick={handleAdd} className="h-6 w-full cursor-pointer">
-        <Image
-          src="/icons/plus.svg"
-          alt="Add additional item"
-          width={21}
-          height={24}
-          priority
-        />
+        <Plus width={21} height={24} />
       </button>
     </div>
   );

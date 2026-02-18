@@ -22,10 +22,10 @@ export default function CartModal() {
     if (isOpen) {
       window?.scrollTo(0, 0);
       body?.classList.add("overflow-hidden");
-      body?.classList.add("h-dvh");
+      body?.classList.add("max-h-dvh");
     } else {
       body?.classList.remove("overflow-hidden");
-      body?.classList.remove("h-dvh");
+      body?.classList.remove("max-h-dvh");
     }
   });
 

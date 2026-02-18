@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 
 /* components */
@@ -19,6 +20,10 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "BetterTacos",
   description: "An interview project",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

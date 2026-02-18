@@ -30,6 +30,7 @@ export default function AddCart({ item }: { item: MenuItemType }) {
         alt={`Add ${item.name} to cart`}
         width={27}
         height={24}
+        priority
       />
     </button>
   );

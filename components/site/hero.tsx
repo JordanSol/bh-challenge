@@ -10,6 +10,7 @@ export default function Hero() {
           className="inline-block"
           width={198.91}
           height={183}
+          priority
         />
       </div>
       <div

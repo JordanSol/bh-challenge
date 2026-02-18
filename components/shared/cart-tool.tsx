@@ -44,6 +44,7 @@ export default function CartTool({ item }: { item: MenuItemType }) {
           alt="Remove item from cart"
           width={21}
           height={24}
+          priority
         />
       </button>
       <span className="text-2xl leading-none">{itemAmount}</span>
@@ -53,6 +54,7 @@ export default function CartTool({ item }: { item: MenuItemType }) {
           alt="Add additional item"
           width={21}
           height={24}
+          priority
         />
       </button>
     </div>

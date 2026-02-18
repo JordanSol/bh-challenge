@@ -21,7 +21,13 @@ export default function CartButton() {
         if (setValue && value) setValue({ ...value, isOpen: !value.isOpen });
       }}
     >
-      <Image src="/icons/cart.svg" alt="cart icons" width={27} height={25} />
+      <Image
+        src="/icons/cart.svg"
+        alt="cart icon"
+        width={27}
+        height={25}
+        priority
+      />
       {cartTotal ? (
         <div className="absolute -top-1/2 -right-1/2 pointer-events-none bold font-white rounded-full w-5.25 h-5.25 bg-primary text-white font-bold text-sm">
           <span>{cartTotal}</span>

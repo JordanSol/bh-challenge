@@ -48,6 +48,7 @@ export default function CartModal() {
                 alt="Close cart"
                 width={36}
                 height={36}
+                priority
               />
             </button>
           </div>

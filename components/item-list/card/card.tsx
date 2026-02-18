@@ -25,6 +25,7 @@ export default function Card({ item }: { item: MenuItemType }) {
             width={20}
             height={20}
             alt="Ratings star"
+            priority
           />
           <span className="font-bold text-white">{item.rating}</span>
         </div>

@@ -11,6 +11,7 @@ export default function Header() {
           alt="BetterTaco Logo"
           width={118}
           height={45}
+          priority
         />
         <CartButton />
       </div>

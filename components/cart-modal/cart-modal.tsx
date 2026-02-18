@@ -43,7 +43,7 @@ export default function CartModal() {
         onClick={handleClose}
         className="bg-black/50 fixed w-screen h-full top-0 left-0"
       ></div>
-      <div className="absolute w-screen h-dvh top-0 left-0 flex items-center justify-center pointer-events-none">
+      <div className="fixed lg:absolute w-screen h-dvh top-0 left-0 flex items-center justify-center pointer-events-none">
         <div className="w-full h-full overflow-auto bg-white lg:rounded-[20px] lg:max-w-200 p-10 lg:h-9/10 pointer-events-auto flex flex-col">
           <div className="flex justify-between items-center mb-20">
             <h3 className="text-[32px] font-bold">Shopping cart</h3>
